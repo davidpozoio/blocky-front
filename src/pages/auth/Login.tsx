@@ -12,6 +12,8 @@ import { useAppStore } from "../../store/store";
 import BlockLink from "../../components/BlockLink";
 import "./styles/pages-styles.css";
 import useTitle from "../../hooks/useTitle";
+import wave2 from "../../../public/wave-2.svg";
+import wave3 from "../../../public/wave-3.svg";
 
 const Login = () => {
   const [errors, setErrors] = useState<ErrorMessage[]>([]);
@@ -56,14 +58,14 @@ const Login = () => {
     <div className="container content-grid">
       <img
         className="wave first"
-        src="/wave-2.svg"
+        src={wave2}
         alt="wave figure"
         width="500"
         height="500"
       />
       <img
         className="wave second"
-        src="/wave-3.svg"
+        src={wave3}
         alt="wave figure"
         width="500"
         height="500"

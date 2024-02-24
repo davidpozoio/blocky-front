@@ -32,3 +32,9 @@
   font-size: 12px;
   color: var(--alert-color);
 }
+
+@media (width < 400px) {
+  .input {
+    width: 100%;
+  }
+}

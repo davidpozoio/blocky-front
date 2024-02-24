@@ -1,13 +1,17 @@
 .form-container {
-  width: 300px;
   justify-self: center;
+
+  padding-bottom: 50px;
+  width: 300px;
+
+  border-radius: 10px;
 }
 
 .container {
   width: 100%;
   height: calc(100vh - 70px);
 
-  overflow: hidden;
+  overflow: auto;
 }
 
 .wave {
@@ -28,4 +32,21 @@
 
 .first {
   top: calc(100% - 430px);
+}
+
+@media (width < 400px) {
+  .form-container {
+    margin-top: 20px;
+    width: fit-content;
+  }
+  .wave {
+    left: -100px;
+
+    transform: scale(0.8);
+  }
+
+  .second {
+    top: -50px;
+    left: -1px;
+  }
 }

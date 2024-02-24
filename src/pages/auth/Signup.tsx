@@ -13,6 +13,8 @@ import BlockLink from "../../components/BlockLink";
 import { useAppStore } from "../../store/store";
 import "./styles/pages-styles.css";
 import useTitle from "../../hooks/useTitle";
+import wave2 from "../../../public/wave-2.svg";
+import wave3 from "../../../public/wave-3.svg";
 
 const Signup = () => {
   const [errors, setErrors] = useState<ErrorMessage[]>([]);
@@ -53,14 +55,14 @@ const Signup = () => {
     <div className="container content-grid">
       <img
         className="wave first"
-        src="/wave-2.svg"
+        src={wave2}
         alt="wave figure"
         width="500"
         height="500"
       />
       <img
         className="wave second"
-        src="/wave-3.svg"
+        src={wave3}
         alt="wave figure"
         width="500"
         height="500"
@@ -112,11 +114,14 @@ const Signup = () => {
         <button
           type="submit"
           disabled={isLoading || isAuthenticating}
-          className="button --dark --full-extension"
+          className="button --dark --full-extension --box-shadow-border"
         >
           Sign up!
         </button>
-        <BlockLink className="button --full-extension" to={ROUTES.AUTH.LOGIN}>
+        <BlockLink
+          className="button --full-extension --box-shadow-border"
+          to={ROUTES.AUTH.LOGIN}
+        >
           Log in
         </BlockLink>
       </Form>

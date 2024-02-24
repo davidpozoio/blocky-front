@@ -2,9 +2,9 @@
   position: relative;
 
   display: grid;
-  grid-template-columns: [full-width-start] 30px [nav-content-start] 150px [nav-content-end] 30px [content-start] 1fr [content-end] 30px [full-width-end];
+  grid-template-columns: [full-width-start] 1.875rem [nav-content-start] 9.375rem [nav-content-end] 1.875rem [content-start] 1fr [content-end] 1.875rem [full-width-end];
 
-  height: calc(100vh - 70px);
+  height: calc(100vh - 4.375rem);
 }
 
 .note-grid > * {
@@ -17,7 +17,7 @@
 
 .note-grid > .--main-content {
   display: grid;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 6.25rem 1fr;
 
   grid-column: content-start / full-width-end;
   overflow-y: auto;
@@ -25,4 +25,17 @@
 
   scrollbar-color: var(--primary-color) var(--secondary-color);
   scrollbar-width: thin;
+}
+
+@media (width < 25rem) {
+  .note-grid {
+    grid-template-columns: [full-width-start] 0.625rem [nav-content-start] 0rem [nav-content-end] 0rem [content-start] 1fr [content-end] 0.625rem [full-width-end];
+  }
+
+  .note-grid > .--main-content {
+    grid-column: full-width-start / full-width-end;
+  }
+  .--main-content > * {
+    grid-column: nav-content-start / content-end;
+  }
 }

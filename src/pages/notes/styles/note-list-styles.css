@@ -9,7 +9,7 @@
 .note-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(230px, 1fr));
   gap: 20px;
   width: 100%;
 
@@ -71,4 +71,15 @@
   height: 300px;
 
   object-fit: fill;
+}
+
+@media (width < 400px) {
+  .note-list {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .add-note-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
 }

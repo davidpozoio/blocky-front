@@ -27,6 +27,8 @@ interface AppState extends UserState, NoteListState {
   setBlockLinks: (state: boolean) => void;
   isAuthenticating: boolean;
   setIsAuthenticating: (state: boolean) => void;
+  isNavOpen: boolean;
+  setIsNavOpen: (state: boolean) => void;
 }
 
 export const selectDeletingNote = (state: AppState, noteId: number) =>
@@ -57,5 +59,9 @@ export const useAppStore = create<AppState>((set, get) => ({
   isAuthenticating: false,
   setIsAuthenticating: (state) => {
     set({ isAuthenticating: state });
+  },
+  isNavOpen: false,
+  setIsNavOpen: (state) => {
+    set({ isNavOpen: state });
   },
 }));

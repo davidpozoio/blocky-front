@@ -12,8 +12,8 @@ import { useAppStore } from "../../store/store";
 import BlockLink from "../../components/BlockLink";
 import "./styles/pages-styles.css";
 import useTitle from "../../hooks/useTitle";
-import wave2 from "../../../public/wave-2.svg";
-import wave3 from "../../../public/wave-3.svg";
+import wave2 from "/wave-2.svg";
+import wave3 from "/wave-3.svg";
 
 const Login = () => {
   const [errors, setErrors] = useState<ErrorMessage[]>([]);
@@ -99,13 +99,16 @@ const Login = () => {
         />
 
         <button
-          className="button --dark --full-extension"
+          className="button --dark --full-extension --box-shadow-border"
           type="submit"
           disabled={isLoading || isAuthenticating}
         >
           Log in!
         </button>
-        <BlockLink className="button --full-extension" to={ROUTES.AUTH.SIGNUP}>
+        <BlockLink
+          className="button --full-extension --box-shadow-border"
+          to={ROUTES.AUTH.SIGNUP}
+        >
           sign up
         </BlockLink>
       </Form>

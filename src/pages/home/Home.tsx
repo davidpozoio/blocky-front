@@ -2,6 +2,8 @@ import ROUTES from "../../consts/routes";
 import BlockLink from "../../components/BlockLink";
 import "./styles/home-styles.css";
 import useTitle from "../../hooks/useTitle";
+import homeDraw from "/home-draw.svg";
+import wave1 from "/wave-1.svg";
 
 const Home = () => {
   useTitle("home");
@@ -17,14 +19,14 @@ const Home = () => {
           </BlockLink>
           <div className="ilustration full-width">
             <img
-              src="/home-draw.svg"
+              src={homeDraw}
               className="draw"
               alt="example ilustration"
               width="400"
               height="400"
             />
             <img
-              src="/wave-1.svg"
+              src={wave1}
               alt="wave figure"
               className="initial-wave"
               width="800"

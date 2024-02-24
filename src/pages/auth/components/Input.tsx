@@ -37,7 +37,7 @@ const Input = ({
 
   return (
     <div className="input-container">
-      <label htmlFor={`I${name}`} className="label">
+      <label htmlFor={`I${name}`} className="label --text-shadow-border">
         {label}
       </label>
       <input
@@ -45,11 +45,11 @@ const Input = ({
         type={type}
         placeholder={placeholder}
         {...fields}
-        className="input"
+        className="input --box-shadow-border"
       />
       {errorsState
         ? errorsState[name] && (
-            <span className="error-message">{`${errorsState[name]?.message}`}</span>
+            <span className="error-message --text-shadow-border">{`${errorsState[name]?.message}`}</span>
           )
         : ""}
     </div>

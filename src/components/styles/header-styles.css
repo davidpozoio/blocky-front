@@ -12,16 +12,47 @@
   backdrop-filter: blur(3px);
 }
 
-.options {
-  display: none;
-}
-
-.content {
+.content-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
+
+.auth-options-button {
+  display: none;
+
+  font-size: 18px;
+
+  color: var(--primary-color);
+}
+
+.options {
+  display: none;
+  font-size: 18px;
+
+  color: var(--primary-color);
+}
+
 .nav {
   display: flex;
   gap: 20px;
+}
+
+@media (width < 400px) {
+  .header {
+    flex-direction: row-reverse;
+  }
+  .nav {
+    display: none;
+  }
+  .auth-options-button {
+    display: flex;
+    justify-self: end;
+    background-color: aqua;
+    border: 1px solid black;
+  }
+  .options {
+    display: flex;
+    width: fit-content;
+  }
 }

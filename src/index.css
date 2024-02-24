@@ -10,6 +10,7 @@
 
   --secondary-color: white;
   --secondary-color-transparent: rgba(255, 255, 255, 0.7);
+  --android-media-query: 400px;
 }
 
 .lexend-100 {
@@ -51,4 +52,9 @@ h1 {
 
 ul {
   list-style-type: none;
+}
+
+.--remove-button-styles {
+  background-color: transparent;
+  border: 0;
 }

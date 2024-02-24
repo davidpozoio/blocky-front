@@ -5,11 +5,15 @@
   justify-content: center;
   gap: 30px;
 
-  padding-top: 50px;
+  padding: 50px 10px;
+  background-color: var(--secondary-color-transparent);
+  border-radius: 10px;
 }
 
 .ilustration {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
 }
 
 .ilustration > * {
@@ -28,4 +32,35 @@
   left: -250px;
   z-index: -1;
   width: 200%;
+}
+
+@media (width < 400px) {
+  .ilustration {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    bottom: 0;
+    bottom: -30px;
+  }
+
+  .ilustration > * {
+    width: 100%;
+  }
+
+  .initial-wave {
+    left: -300px;
+    top: -250px;
+    bottom: 200px;
+    width: 320%;
+  }
+
+  .content-home {
+    margin-top: 20px;
+    height: fit-content;
+  }
+
+  .content-home > p {
+    text-align: center;
+  }
 }

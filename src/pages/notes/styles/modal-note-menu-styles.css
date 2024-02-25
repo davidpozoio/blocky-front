@@ -63,7 +63,7 @@ button {
   }
 }
 
-@media (width < 400px) {
+@media (width < 470px) {
   .modal-menu {
     width: 50%;
     transform: none;

@@ -144,7 +144,7 @@ button:hover {
   }
 }
 
-@media (width < 25rem) {
+@media (width < 470px) {
   .content-grid,
   .full-width {
     display: grid;

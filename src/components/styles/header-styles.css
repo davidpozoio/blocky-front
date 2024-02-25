@@ -38,7 +38,7 @@
   gap: 20px;
 }
 
-@media (width < 400px) {
+@media (width < 470px) {
   .header {
     flex-direction: row-reverse;
   }

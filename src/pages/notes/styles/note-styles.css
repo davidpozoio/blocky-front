@@ -27,7 +27,7 @@
   scrollbar-width: thin;
 }
 
-@media (width < 25rem) {
+@media (width < 29.375rem) {
   .note-grid {
     grid-template-columns: [full-width-start] 0.625rem [nav-content-start] 0rem [nav-content-end] 0rem [content-start] 1fr [content-end] 0.625rem [full-width-end];
   }

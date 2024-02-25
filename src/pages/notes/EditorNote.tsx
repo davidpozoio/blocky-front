@@ -155,6 +155,10 @@ const EditorNote = ({ note }: EditorNoteProps) => {
             className="gradient-title --small-title title-editor"
           >
             <Editor
+              autoCapitalize={"none"}
+              autoComplete={"off"}
+              autoCorrect={"off"}
+              spellCheck={false}
               ref={title.ref}
               editorState={title.editor}
               onChange={title.handleEditor}
@@ -162,6 +166,10 @@ const EditorNote = ({ note }: EditorNoteProps) => {
           </div>
           <div onClick={() => content.focus()} className="content-editor">
             <Editor
+              autoCapitalize={"none"}
+              autoComplete={"off"}
+              autoCorrect={"off"}
+              spellCheck={false}
               ref={content.ref}
               editorState={content.editor}
               onChange={content.handleEditor}

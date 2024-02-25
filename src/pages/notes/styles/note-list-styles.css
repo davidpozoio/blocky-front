@@ -73,9 +73,9 @@
   object-fit: fill;
 }
 
-@media (width < 400px) {
+@media (width < 470px) {
   .note-list {
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
   }
   .add-note-button {

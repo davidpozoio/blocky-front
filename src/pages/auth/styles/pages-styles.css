@@ -34,7 +34,7 @@
   top: calc(100% - 430px);
 }
 
-@media (width < 400px) {
+@media (width < 470px) {
   .form-container {
     margin-top: 20px;
     width: fit-content;

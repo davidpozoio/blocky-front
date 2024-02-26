@@ -73,6 +73,10 @@
   object-fit: fill;
 }
 
+.title-container {
+  margin-bottom: 20px;
+}
+
 @media (width < 470px) {
   .note-list {
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));

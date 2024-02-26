@@ -17,7 +17,7 @@
 
 .note-grid > .--main-content {
   display: grid;
-  grid-template-rows: 6.25rem 1fr;
+  grid-template-rows: 8.75rem 1fr;
 
   grid-column: content-start / full-width-end;
   overflow-y: auto;

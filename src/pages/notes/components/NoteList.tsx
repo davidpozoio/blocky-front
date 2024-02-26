@@ -58,19 +58,28 @@ const NoteList = ({ trashBean }: NoteListProps) => {
         show={(toggle && !trashBean) || (isCreatingNote && !trashBean)}
         onClose={handleClose}
       />
-      <h2 className="gradient-title --medium-title note-list-title">
-        {trashBean ? "Trash" : "My notes"}
-      </h2>
-      {notes?.length === 0 && (
-        <span>
-          {trashBean ? "Trash empty" : "There is no notes yet, create one!"}
-          <img
-            className="no-notes-draw"
-            src="/no-notes-draw.svg"
-            alt="without notes image"
-          />
-        </span>
-      )}
+      <div>
+        <h2 className="gradient-title --medium-title note-list-title">
+          {trashBean ? "Trash" : "My notes"}
+        </h2>
+        {trashBean && (
+          <p className="--small-title">
+            The notes will be deleted after 7 days
+          </p>
+        )}
+
+        {notes?.length === 0 && (
+          <span>
+            {trashBean ? "Trash empty" : "There is no notes yet, create one!"}
+            <img
+              className="no-notes-draw"
+              src="/no-notes-draw.svg"
+              alt="without notes image"
+            />
+          </span>
+        )}
+      </div>
+
       {error && (
         <>
           <span>{error}</span>
